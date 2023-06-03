@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/noteList"
+        android:icon="@drawable/ic_note"
+        android:title="@string/notes" />
+
+    <item
+        android:id="@+id/taskList"
+        android:icon="@drawable/ic_task"
+        android:title="@string/tasks"/>
+
+    <item
+        android:id="@+id/folderList"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/folders" />
+
+    <item
+        android:id="@+id/trashList"
+        android:icon="@drawable/ic_trash"
+        android:title="@string/trash"/>
+
+    <item
+        android:id="@+id/settingsList"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"/>
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_info"
+        android:title="@string/about"/>
+
+
+</menu>

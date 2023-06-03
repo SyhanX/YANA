@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/noteList">
+
+    <fragment
+        android:id="@+id/noteList"
+        android:name="com.example.yana.fragments.notes.NoteListFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_note_list" >
+        <action
+            android:id="@+id/action_noteList_to_noteCreate"
+            app:destination="@id/noteCreate" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteCreate"
+        android:name="com.example.yana.fragments.notes.NoteCreateFragment"
+        android:label="Add a note"
+        tools:layout="@layout/fragment_note_create" >
+        <action
+            android:id="@+id/action_noteCreate_to_noteList2"
+            app:destination="@id/noteList" />
+        <argument
+            android:name="currentNote"
+            app:argType="com.example.yana.data.Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/folderList"
+        android:name="com.example.yana.fragments.folders.FolderListFragment"
+        android:label="@string/folders"
+        tools:layout="@layout/fragment_folder_list" />
+</navigation>
