@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_noteList_to_noteCreate"
             app:destination="@id/noteCreate" />
+        <action
+            android:id="@+id/action_noteList_to_noteUpdateFragment"
+            app:destination="@id/noteUpdate" />
     </fragment>
     <fragment
         android:id="@+id/noteCreate"
@@ -22,13 +25,36 @@
         <action
             android:id="@+id/action_noteCreate_to_noteList2"
             app:destination="@id/noteList" />
-        <argument
-            android:name="currentNote"
-            app:argType="com.example.yana.data.Note" />
     </fragment>
     <fragment
         android:id="@+id/folderList"
         android:name="com.example.yana.fragments.folders.FolderListFragment"
         android:label="@string/folders"
         tools:layout="@layout/fragment_folder_list" />
+    <fragment
+        android:id="@+id/noteUpdate"
+        android:name="com.example.yana.fragments.notes.NoteUpdateFragment"
+        android:label="Update note" >
+        <action
+            android:id="@+id/action_noteUpdateFragment_to_noteList"
+            app:destination="@id/noteList" />
+        <argument
+            android:name="currentNote"
+            app:argType="com.example.yana.data.Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.yana.fragments.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/settingsList"
+        android:name="com.example.yana.fragments.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/trashList"
+        android:name="com.example.yana.fragments.trash.TrashListFragment"
+        android:label="Trash"
+        tools:layout="@layout/fragment_trash_list" />
 </navigation>

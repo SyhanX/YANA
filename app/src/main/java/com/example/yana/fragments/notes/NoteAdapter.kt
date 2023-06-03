@@ -31,11 +31,10 @@ class NoteAdapter :
             noteContent.text = currentItem.content
             noteCard.setOnClickListener {
                 val action =
-                    NoteListFragmentDirections.actionNoteListToNoteCreate(currentItem)
+                    NoteListFragmentDirections.actionNoteListToNoteUpdateFragment(currentItem)
                 holder.itemView.findNavController().navigate(action)
             }
             noteCard.setOnLongClickListener {
-
                 return@setOnLongClickListener true
             }
         }
